@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout android:id="@+id/layoutmain"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/btn_pick_img"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Pilih Gambar"
+            android:textSize="30dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:onClick="buttonClicked"
+            android:layout_width="wrap_content" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/effect_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image"
+        android:layout_below="@+id/layoutmain"
+        android:layout_above="@+id/horizontalScrollView"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="APLIKASI PENGOLAHAN CITRA DIGITAL"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:fontFamily="monospace"
+        android:layout_above="@id/horizontalScrollView"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/effect_brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:onClick="buttonClicked"
+                android:src="@drawable/brigtness" />
+            <ImageView
+                android:id="@+id/effect_contrast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:onClick="buttonClicked"
+                android:src="@drawable/contrast" />
+            <ImageView
+                android:id="@+id/effect_grayscale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:onClick="buttonClicked"
+                android:src="@drawable/greyscale" />
+            <ImageView
+                android:id="@+id/effect_biner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:onClick="buttonClicked"
+                android:src="@drawable/biner" />
+            <ImageView
+                android:id="@+id/effect_invert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:onClick="buttonClicked"
+                android:src="@drawable/negative" />
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+</RelativeLayout>
